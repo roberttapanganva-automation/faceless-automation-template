@@ -1,0 +1,104 @@
+{
+  "schema_version": "2.3",
+  "series_id": "",
+  "episode_id": "",
+  "language": "Tagalog",
+  "target_runtime_seconds": 0,
+  "aspect_ratio": "9:16",
+  "providers": {
+    "image": "ChatGPT",
+    "video": "Omni Flash"
+  },
+  "approvals": {
+    "storyboard": {
+      "approved": false,
+      "evidence": ""
+    },
+    "images": {
+      "approved": false,
+      "evidence": ""
+    },
+    "video": {
+      "approved": false,
+      "evidence": ""
+    },
+    "publish": {
+      "approved": false,
+      "evidence": ""
+    }
+  },
+  "characters": [],
+  "assets": [],
+  "jobs": [],
+  "edit": [],
+  "script": {
+    "path": "episode-script.md",
+    "review": ""
+  },
+  "script_beats": [],
+  "pronunciations": [],
+  "workflow": {
+    "events": []
+  },
+  "final_package": {
+    "required": [
+      "movie",
+      "cover",
+      "caption"
+    ],
+    "files": {
+      "movie": "",
+      "cover": "",
+      "caption": ""
+    },
+    "duration_seconds": 0,
+    "review": "",
+    "qa": {
+      "identity": {
+        "result": "fail",
+        "reason": "Not reviewed yet"
+      },
+      "wardrobe": {
+        "result": "fail",
+        "reason": "Not reviewed yet"
+      },
+      "props": {
+        "result": "fail",
+        "reason": "Not reviewed yet"
+      },
+      "blocking": {
+        "result": "fail",
+        "reason": "Not reviewed yet"
+      },
+      "lighting": {
+        "result": "fail",
+        "reason": "Not reviewed yet"
+      },
+      "emotion": {
+        "result": "fail",
+        "reason": "Not reviewed yet"
+      },
+      "mouth_visibility": {
+        "result": "fail",
+        "reason": "Not reviewed yet"
+      },
+      "dialogue": {
+        "result": "fail",
+        "reason": "Not reviewed yet"
+      },
+      "audio_continuity": {
+        "result": "fail",
+        "reason": "Not reviewed yet"
+      },
+      "timing": {
+        "result": "fail",
+        "reason": "Not reviewed yet"
+      },
+      "unwanted_text_music": {
+        "result": "fail",
+        "reason": "Not reviewed yet"
+      }
+    }
+  },
+  "workflow_profile": "tagpi_credit_optimized"
+}

@@ -1,0 +1,56 @@
+{
+  "video": {
+    "duration_seconds": 6,
+    "aspect_ratio": "9:16",
+    "shot_count": 2,
+    "cut_times_seconds": [
+      3
+    ],
+    "pacing": "Two camera angles from one dedicated speaking-line image."
+  },
+  "scene_direction": "[0.00-6.00s] Approved scene context. Mother alone is visible; this beat requires no background people. [0.00-3.00s] @Clip 1 - Mother Confronts Son At Kitchen Table: eye-level medium close-up. Cut from @Clip 1 - Mother Confronts Son At Kitchen Table to @Clip 1 - Mother Confronts Son At Kitchen Table at 3s, changing to a slight side close-up without interrupting audio. [3.00-6.00s] @Clip 1 - Mother Confronts Son At Kitchen Table: side close-up; hold settled ending. Maintain the exact character in @Clip 1 - Mother Confronts Son At Kitchen Table: same face, age, skin tone, hair, body proportions, wardrobe and accessories throughout motion and cuts. Do not replace, duplicate or morph her. No additional characters, extras, bystanders, crowd, silhouettes, blurred people, reflections of people or anyone behind Mother.",
+  "reference_asset_ids": [
+    "REPLACE_LINE_SCENE_ID"
+  ],
+  "reference_mentions": [
+    "@Clip 1 - Mother Confronts Son At Kitchen Table"
+  ],
+  "audio": {
+    "mode": "dialogue",
+    "track": "continuous",
+    "dialogue_turns": [
+      {
+        "speaker": "REPLACE_SPEAKER",
+        "line": "REPLACE_APPROVED_LINE",
+        "reference_mention": "@Clip 1 - Mother Confronts Son At Kitchen Table",
+        "in": 0,
+        "out": 6
+      }
+    ],
+    "continuity": "ONE continuous voice performance over both angles. Do not restart, repeat, fade, mute or cut the dialogue at the visual transition."
+  },
+  "shots": [
+    {
+      "shot": 1,
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "reference_mention": "@Clip 1 - Mother Confronts Son At Kitchen Table",
+      "camera_placement_and_movement": "@Clip 1 - Mother Confronts Son At Kitchen Table: eye-level medium close-up",
+      "transition": "Cut from @Clip 1 - Mother Confronts Son At Kitchen Table to @Clip 1 - Mother Confronts Son At Kitchen Table; continuous audio"
+    },
+    {
+      "shot": 2,
+      "start_seconds": 3,
+      "end_seconds": 6,
+      "reference_mention": "@Clip 1 - Mother Confronts Son At Kitchen Table",
+      "camera_placement_and_movement": "@Clip 1 - Mother Confronts Son At Kitchen Table: slight side close-up",
+      "transition": "Hold @Clip 1 - Mother Confronts Son At Kitchen Table"
+    }
+  ],
+  "constraints": [
+    "Same dedicated speaking ingredient supports both angles of this one line; preserve identity, blocking, wardrobe, lighting and screen axis.",
+    "Mother alone is visible in this example; add no background people. For a scene that explicitly requires another character or a crowd, replace this exclusion and the matching scene direction with their approved identities or descriptions, positions and actions; add no unrequested people.",
+    "No generated music, titles, subtitles or watermark."
+  ],
+  "template_note": "One-reference 6-second structure example. The current Tagpi v2.3 profile also permits one-reference 10-second sources with at least two distinct angles and uninterrupted audio. Replace all placeholders and use actual approved mappings."
+}

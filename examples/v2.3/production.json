@@ -1,0 +1,124 @@
+{
+  "schema_version": "2.3",
+  "series_id": "current_tagpi_workflow_example",
+  "episode_id": "EXAMPLE",
+  "language": "Tagalog",
+  "aspect_ratio": "9:16",
+  "providers": {
+    "image": "ChatGPT",
+    "video": "Omni Flash"
+  },
+  "target_runtime_seconds": 10,
+  "approvals": {
+    "storyboard": {
+      "approved": false,
+      "evidence": ""
+    },
+    "images": {
+      "approved": false,
+      "evidence": ""
+    },
+    "video": {
+      "approved": false,
+      "evidence": ""
+    },
+    "publish": {
+      "approved": false,
+      "evidence": ""
+    }
+  },
+  "characters": [
+    "Mother",
+    "Son"
+  ],
+  "script": {
+    "path": "episode-script.md",
+    "review": "Example inventory matches the example script; no real production approval has been recorded."
+  },
+  "script_beats": [
+    {
+      "id": "line",
+      "kind": "dialogue",
+      "speaker": "Mother",
+      "line": "Bakit mo itinago sa akin?",
+      "job_id": "J1",
+      "reference_id": "A1",
+      "emotion": "Hurt but controlled",
+      "wardrobe": "Blue blouse",
+      "blocking": "Seated at table",
+      "lighting": "Warm kitchen lamp"
+    }
+  ],
+  "assets": [
+    {
+      "id": "A1",
+      "role": "hero",
+      "status": "planned",
+      "prompt": "Dedicated Mother speaking frame, face and mouth visible",
+      "references": [],
+      "output_path": "Clip 1 - Mother Confronts Son At Kitchen Table.png"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "J1",
+      "clip_number": 1,
+      "status": "planned",
+      "prompt": "[0.00-10.00s] Approved fictional kitchen scene.",
+      "duration_seconds": 10,
+      "mode": "multishot",
+      "pacing_reason": "Two speaking angles, then a dedicated silent reaction",
+      "references": [
+        "A1"
+      ],
+      "output_path": "Clip 1.mp4",
+      "audio": {
+        "mode": "dialogue",
+        "continuity": "continuous",
+        "lines": [
+          {
+            "beat_id": "line",
+            "speaker": "Mother",
+            "line": "Bakit mo itinago sa akin?",
+            "reference_id": "A1",
+            "in": 0,
+            "out": 10
+          }
+        ]
+      },
+      "shots": [
+        {
+          "in": 0,
+          "out": 5,
+          "role": "dialogue",
+          "action": "Mother confronts Son",
+          "camera": "Steady medium close-up",
+          "angle": "eye level front",
+          "reference_id": "A1"
+        },
+        {
+          "in": 5,
+          "out": 10,
+          "role": "dialogue",
+          "action": "Same performance continues",
+          "camera": "Stable side close-up",
+          "angle": "slight side",
+          "reference_id": "A1"
+        }
+      ]
+    }
+  ],
+  "edit": [
+    {
+      "source": "J1",
+      "in": 0,
+      "out": 10,
+      "audio_bridge": "One continuous reviewed speech and kitchen ambience"
+    }
+  ],
+  "pronunciations": [],
+  "workflow": {
+    "events": []
+  },
+  "workflow_profile": "tagpi_credit_optimized"
+}

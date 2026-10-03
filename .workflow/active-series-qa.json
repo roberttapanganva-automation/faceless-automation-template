@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-01",
+  "scope": "Read-only scan of active series handoff metadata; no scripts/media/approvals migrated",
+  "series": [
+    {
+      "title": "Ang Bawi ng Tagapagmana",
+      "path": "series/ang-bawi-ng-tagapagmana",
+      "production_manifests": 0,
+      "current_v22_manifests": 0,
+      "video_prompt_files": 3,
+      "issues": [
+        {
+          "issue": "No current v2.2 production manifest yet; new work must use reviewed inventory/mappings, not claim current QA from plain prompts."
+        }
+      ]
+    },
+    {
+      "title": "Pekeng Kasal",
+      "path": "series/ang-lihim-ng-huwad-na-asawa",
+      "production_manifests": 0,
+      "current_v22_manifests": 0,
+      "video_prompt_files": 3,
+      "issues": [
+        {
+          "issue": "No current v2.2 production manifest yet; new work must use reviewed inventory/mappings, not claim current QA from plain prompts."
+        }
+      ]
+    },
+    {
+      "title": "Pirma ni Tatay",
+      "path": "series/ang-malamig-na-desisyon",
+      "production_manifests": 0,
+      "current_v22_manifests": 0,
+      "video_prompt_files": 2,
+      "issues": [
+        {
+          "issue": "No current v2.2 production manifest yet; new work must use reviewed inventory/mappings, not claim current QA from plain prompts."
+        }
+      ]
+    },
+    {
+      "title": "Kwento ng Isang Single Mother",
+      "path": "series/kwento-ng-isang-single-mother",
+      "production_manifests": 0,
+      "current_v22_manifests": 0,
+      "video_prompt_files": 0,
+      "issues": [
+        {
+          "issue": "No current v2.2 production manifest yet; new work must use reviewed inventory/mappings, not claim current QA from plain prompts."
+        }
+      ]
+    },
+    {
+      "title": "Nilunok ang Dangal sa Mansyon",
+      "path": "series/nilunok-ang-dangal-sa-mansyon",
+      "production_manifests": 0,
+      "current_v22_manifests": 0,
+      "video_prompt_files": 0,
+      "issues": [
+        {
+          "issue": "No current v2.2 production manifest yet; new work must use reviewed inventory/mappings, not claim current QA from plain prompts."
+        }
+      ]
+    },
+    {
+      "title": "Tagpi-tagping Bahay",
+      "path": "series/tagpi-tagping-bahay",
+      "production_manifests": 0,
+      "current_v22_manifests": 0,
+      "video_prompt_files": 3,
+      "issues": [
+        {
+          "path": "series/tagpi-tagping-bahay/episodes/E001/veo-auto-1ref-10s-batch.txt",
+          "issue": "Current Tagpi one-reference source is permitted; reconcile explicit two-angle coverage and uninterrupted audio before generation.",
+          "ten_second_headers": 3
+        },
+        {
+          "path": "series/tagpi-tagping-bahay/episodes/E001/veo-auto-1ref-4s-batch.txt",
+          "issue": "Current Tagpi one-reference source is permitted; reconcile explicit two-angle coverage and uninterrupted audio before generation.",
+          "ten_second_headers": 0
+        },
+        {
+          "path": "series/tagpi-tagping-bahay/episodes/E001/veo-auto-1ref-6s-batch.txt",
+          "issue": "Current Tagpi one-reference source is permitted; reconcile explicit two-angle coverage and uninterrupted audio before generation.",
+          "ten_second_headers": 0
+        },
+        {
+          "path": "series/tagpi-tagping-bahay/episodes/E001/veo-auto-1ref-8s-batch.txt",
+          "issue": "Current Tagpi one-reference source is permitted; reconcile explicit two-angle coverage and uninterrupted audio before generation.",
+          "ten_second_headers": 0
+        },
+        {
+          "path": "series/tagpi-tagping-bahay/episodes/E001/veo-auto-1ref-prompts-plain.txt",
+          "issue": "Current Tagpi one-reference source is permitted; reconcile explicit two-angle coverage and uninterrupted audio before generation.",
+          "ten_second_headers": 3
+        },
+        {
+          "issue": "No current v2.2 production manifest yet; new work must use reviewed inventory/mappings, not claim current QA from plain prompts."
+        }
+      ]
+    }
+  ],
+  "current_profile": "tagpi_credit_optimized",
+  "superseded_finding": "One-reference 10-second Tagpi sources are valid under the newly selected profile; the earlier duration-quota conflict is withdrawn."
+}

@@ -1,0 +1,538 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tagalog Drama Production v2.1",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "2.1"
+    },
+    "series_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "episode_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "const": "Tagalog"
+    },
+    "aspect_ratio": {
+      "const": "9:16"
+    },
+    "target_runtime_seconds": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "providers": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "const": "ChatGPT"
+        },
+        "video": {
+          "const": "Omni Flash"
+        }
+      },
+      "required": [
+        "image",
+        "video"
+      ],
+      "additionalProperties": false
+    },
+    "approvals": {
+      "type": "object",
+      "properties": {
+        "storyboard": {
+          "type": "object",
+          "properties": {
+            "approved": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "approved",
+            "evidence"
+          ],
+          "additionalProperties": false
+        },
+        "images": {
+          "type": "object",
+          "properties": {
+            "approved": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "approved",
+            "evidence"
+          ],
+          "additionalProperties": false
+        },
+        "video": {
+          "type": "object",
+          "properties": {
+            "approved": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "approved",
+            "evidence"
+          ],
+          "additionalProperties": false
+        },
+        "publish": {
+          "type": "object",
+          "properties": {
+            "approved": {
+              "type": "boolean"
+            },
+            "evidence": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "approved",
+            "evidence"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "storyboard",
+        "images",
+        "video",
+        "publish"
+      ],
+      "additionalProperties": false
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "planned",
+              "generated",
+              "approved",
+              "rejected"
+            ]
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "output_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "review": {
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "character",
+              "location",
+              "prop",
+              "hero",
+              "angle",
+              "broll",
+              "style"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "prompt",
+          "references",
+          "role"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "jobs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "planned",
+              "generated",
+              "approved",
+              "rejected"
+            ]
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "output_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "review": {
+            "type": "string"
+          },
+          "duration_seconds": {
+            "enum": [
+              6,
+              8,
+              10
+            ]
+          },
+          "mode": {
+            "enum": [
+              "multishot",
+              "single_shot_fallback",
+              "discrete_shot",
+              "single_shot"
+            ]
+          },
+          "dialogue_only": {
+            "type": "boolean"
+          },
+          "fallback_reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "shots": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "in": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "out": {
+                  "type": "integer",
+                  "maximum": 10
+                },
+                "role": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "action": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "camera": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "reference_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "pov_owner": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "broll": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "in",
+                "out",
+                "role",
+                "action",
+                "camera"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 5
+          },
+          "audio": {
+            "type": "object",
+            "properties": {
+              "mode": {
+                "enum": [
+                  "dialogue",
+                  "inner_monologue",
+                  "ambience"
+                ]
+              },
+              "speaker": {
+                "type": "string",
+                "minLength": 1
+              },
+              "line": {
+                "type": "string"
+              },
+              "lines": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "speaker": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "line": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "speaker",
+                    "line"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "mode"
+            ],
+            "additionalProperties": false
+          },
+          "pacing_reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "framing_reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "prompt",
+          "references",
+          "duration_seconds",
+          "mode",
+          "shots",
+          "audio"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "mode": {
+                  "const": "multishot"
+                }
+              },
+              "required": [
+                "mode"
+              ]
+            },
+            "then": {
+              "required": [
+                "pacing_reason"
+              ],
+              "properties": {
+                "shots": {
+                  "minItems": 2,
+                  "maxItems": 5
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "shots": {
+                  "minItems": 1,
+                  "maxItems": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "mode": {
+                  "const": "single_shot_fallback"
+                }
+              },
+              "required": [
+                "mode"
+              ]
+            },
+            "then": {
+              "required": [
+                "fallback_reason"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "dialogue_only": {
+                  "const": true
+                }
+              },
+              "required": [
+                "dialogue_only"
+              ]
+            },
+            "then": {
+              "properties": {
+                "references": {
+                  "minItems": 1,
+                  "maxItems": 2
+                }
+              }
+            },
+            "else": {
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "duration_seconds": {
+                        "const": 6
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "references": {
+                        "minItems": 1,
+                        "maxItems": 2
+                      }
+                    }
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "duration_seconds": {
+                        "const": 8
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "references": {
+                        "minItems": 2,
+                        "maxItems": 3
+                      }
+                    }
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "duration_seconds": {
+                        "const": 10
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "references": {
+                        "minItems": 3,
+                        "maxItems": 3
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "edit": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "in": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "out": {
+            "type": "integer",
+            "exclusiveMinimum": 0
+          },
+          "audio_bridge": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "source",
+          "in",
+          "out",
+          "audio_bridge"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "final_review": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "series_id",
+    "episode_id",
+    "language",
+    "aspect_ratio",
+    "target_runtime_seconds",
+    "providers",
+    "approvals",
+    "characters",
+    "assets",
+    "jobs",
+    "edit"
+  ],
+  "additionalProperties": false
+}

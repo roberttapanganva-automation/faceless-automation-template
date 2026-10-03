@@ -1,0 +1,50 @@
+{
+  "id": "REPLACE_ITEM_ID",
+  "evidence": "REPLACE_ACTUAL_REVIEW_NOTES",
+  "qa": {
+    "identity": {
+      "result": "fail",
+      "reason": "Not reviewed yet"
+    },
+    "wardrobe": {
+      "result": "fail",
+      "reason": "Not reviewed yet"
+    },
+    "props": {
+      "result": "fail",
+      "reason": "Not reviewed yet"
+    },
+    "blocking": {
+      "result": "fail",
+      "reason": "Not reviewed yet"
+    },
+    "lighting": {
+      "result": "fail",
+      "reason": "Not reviewed yet"
+    },
+    "emotion": {
+      "result": "fail",
+      "reason": "Not reviewed yet"
+    },
+    "mouth_visibility": {
+      "result": "fail",
+      "reason": "Not reviewed yet"
+    },
+    "dialogue": {
+      "result": "fail",
+      "reason": "Not reviewed yet"
+    },
+    "audio_continuity": {
+      "result": "fail",
+      "reason": "Not reviewed yet"
+    },
+    "timing": {
+      "result": "fail",
+      "reason": "Not reviewed yet"
+    },
+    "unwanted_text_music": {
+      "result": "fail",
+      "reason": "Not reviewed yet"
+    }
+  }
+}

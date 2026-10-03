@@ -1,0 +1,35 @@
+{
+    "project_name": "Fictional Tagalog AI Drama Template (Viral Drama Reverse Engineering)",
+    "page_setup_status": "uninitialized",
+    "active_page_slug": null,
+    "active_series_slug": null,
+    "active_experiment": null,
+    "genre": "viral_tagalog_short_drama",
+    "art_style": "hyper_realistic_primetime_teleserye",
+    "language": "Tagalog",
+    "platform": "Facebook",
+    "image_provider": "ChatGPT",
+    "video_provider": "Omni Flash",
+    "generation_duration_seconds": 10,
+    "pages": {},
+    "series": {},
+    "reverse_engineering_foundation": {
+        "status": "formula_extracted",
+        "analysis_path": "reverse engineer/REVERSE_ENGINEERING_ANALYSIS.md",
+        "core_formula": "Gigil-to-Karma & Experiential Double-Bind architecture: Status contrast hook, unjust humiliation/emotional traps, silent dignity, power flip reversal, and high-engagement hooks",
+        "selected_debut_concept": null
+    },
+    "rules_and_standards": {
+        "granular_coverage_locked": true,
+        "three_to_five_ingredients_per_10s_locked": true,
+        "clip_prefix_naming_locked": true,
+        "mention_prompt_tagging_locked": true,
+        "minor_safety_guardrail_locked": true,
+        "optical_framing_standard_locked": true,
+        "dialogue_preservation_locked": true,
+        "phonetic_flagged_prompt_word_lock": true
+    },
+    "created_at": "2026-09-28",
+    "last_updated": "2026-09-28",
+    "pending_setup_step": "page_setup"
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "2.2",
+  "series_id": "workflow_example",
+  "episode_id": "EXAMPLE",
+  "language": "Tagalog",
+  "aspect_ratio": "9:16",
+  "providers": {"image": "ChatGPT", "video": "Omni Flash"},
+  "target_runtime_seconds": 6,
+  "approvals": {
+    "storyboard": {"approved": false, "evidence": ""},
+    "images": {"approved": false, "evidence": ""},
+    "video": {"approved": false, "evidence": ""},
+    "publish": {"approved": false, "evidence": ""}
+  },
+  "characters": ["Mother"],
+  "script": {"path": "episode-script.md", "review": "Example inventory matches the example script; no actual production approval is recorded."},
+  "script_beats": [
+    {"id": "mother_line", "kind": "dialogue", "speaker": "Mother", "line": "Bakit mo itinago sa akin?", "job_id": "clip_one", "reference_id": "mother_scene", "emotion": "Hurt but controlled", "wardrobe": "Blue blouse", "blocking": "Seated at kitchen table", "lighting": "Warm kitchen lamp"}
+  ],
+  "assets": [
+    {"id": "mother_scene", "role": "hero", "status": "planned", "prompt": "Create the dedicated Mother speaking scene: clear face and mouth, hurt but controlled expression, seated at the kitchen table, blue blouse, warm kitchen lamp. Vertical 9:16. No text or watermark.", "references": [], "output_path": "reference-images/6seconds/Clip 1 - Mother Confronts Son At Kitchen Table.png"}
+  ],
+  "jobs": [
+    {
+      "id": "clip_one",
+      "clip_number": 1,
+      "status": "planned",
+      "duration_seconds": 6,
+      "mode": "multishot",
+      "pacing_reason": "Two distinct camera angles of the same dedicated speaking beat, with one continuous audio performance.",
+      "prompt": "[0.00-6.00s] Fictional kitchen scene with approved Mother identity, blue blouse and warm kitchen lamp. Maintain blocking, wardrobe, light and screen axis.",
+      "references": ["mother_scene"],
+      "output_path": "videos/Clip 1.mp4",
+      "audio": {"mode": "dialogue", "continuity": "continuous", "lines": [{"beat_id": "mother_line", "speaker": "Mother", "line": "Bakit mo itinago sa akin?", "reference_id": "mother_scene", "in": 0, "out": 6}]},
+      "shots": [
+        {"in": 0, "out": 3, "role": "dialogue", "reference_id": "mother_scene", "angle": "eye level front", "action": "Mother delivers the first part of her one approved line", "camera": "Steady medium close-up; face and mouth visible"},
+        {"in": 3, "out": 6, "role": "dialogue", "reference_id": "mother_scene", "angle": "slight side close-up", "action": "The same performance continues without repeating or restarting the line", "camera": "Stable slight side angle on the same visible face and mouth"}
+      ]
+    }
+  ],
+  "edit": [{"source": "clip_one", "in": 0, "out": 6, "audio_bridge": "Keep the one reviewed voice performance uninterrupted across the camera cut"}],
+  "pronunciations": [],
+  "workflow": {"events": []}
+}

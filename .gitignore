@@ -1,0 +1,45 @@
+# Dependencies & Environments
+node_modules/
+venv/
+.env
+
+# Model weights & binaries
+*.bin
+*.pt
+*.onnx
+*.safetensors
+*.gguf
+
+# Video & Raw Media
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Audio Files (raw recordings / heavy tracks)
+*.mp3
+*.wav
+*.m4a
+*.aac
+*.ogg
+!**/bgm/.gitkeep
+!**/sound fx/.gitkeep
+!**/sound-fx/.gitkeep
+
+# Rendered outputs in episodes
+**/videos/*
+!**/videos/.gitkeep
+**/continuity-frames/*
+!**/continuity-frames/.gitkeep
+
+# Operating System & Editor Metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.vscode/
+.idea/
+*.tmp
+*.log

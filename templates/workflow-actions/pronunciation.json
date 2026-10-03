@@ -1,0 +1,12 @@
+{
+  "entry": {
+    "id": "REPLACE_PRONUNCIATION_ID",
+    "canonical": "REPLACE_CANONICAL_LINE",
+    "spoken": "REPLACE_REVIEWED_PRONUNCIATION",
+    "sample_path": "REPLACE_ACTUAL_AUDIO_SAMPLE",
+    "provider": "REPLACE_ACTUAL_PROVIDER",
+    "status": "candidate",
+    "review": "REPLACE_LISTENING_NOTES",
+    "meaning_preserved": false
+  }
+}
